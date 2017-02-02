@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER Jochen Lillich <jochen@freistil.it>
+MAINTAINER freistil IT Ltd <ops@freistil.it>
 
 # Image setup scripts
 RUN mkdir /docker
@@ -9,4 +9,3 @@ RUN chmod a+x /docker/bin/*
 # Boot container
 ENTRYPOINT ["/docker/entrypoint.sh"]
 CMD /bin/bash
-
