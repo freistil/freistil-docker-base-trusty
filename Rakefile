@@ -10,7 +10,7 @@ task default: :build
 desc "Build the image"
 task :build do
   sh "docker build -t #{IMAGE_NAME}:#{GIT_SHA} ."
-  sh "docker tag #{IMAGE_NAME}:#{GIT_SHA} #{IMAGE_NAME}:latest"
+  sh "docker tag -f #{IMAGE_NAME}:#{GIT_SHA} #{IMAGE_NAME}:latest"
 end
 
 desc "Start a container from the image"
