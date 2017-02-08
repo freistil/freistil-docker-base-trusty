@@ -1,6 +1,8 @@
 machine:
   services:
     - docker
+  environment:
+    SPEC_OPTS: "--format documentation --color --format RspecJunitFormatter --out $CIRCLE_TEST_REPORTS/rspec/rspec.xml"
 
 dependencies:
   cache_directories:

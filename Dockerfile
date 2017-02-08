@@ -17,4 +17,4 @@ RUN chmod a+x /docker/bin/*
 
 # Boot container
 ENTRYPOINT ["/docker/entrypoint.sh"]
-CMD /bin/bash
+CMD ["sleep", "60"]
