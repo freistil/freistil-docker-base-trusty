@@ -18,6 +18,11 @@ task run: [:build] do
   sh "docker run #{RUN_OPTS} #{IMAGE_NAME}:#{GIT_SHA}"
 end
 
+desc "Run integration tests"
+task :test do
+  sh "bundle exec rspec spec"
+end
+
 desc "Push image to Docker Hub"
 task push: [:build] do
   sh "docker push #{IMAGE_NAME}:latest"
