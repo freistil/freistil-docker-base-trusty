@@ -13,4 +13,3 @@ if test -n "$(shopt -s nullglob; echo /docker/init.d/*)"; then
 fi
 
 exec $@
-
