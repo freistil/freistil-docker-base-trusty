@@ -9,10 +9,8 @@ dependencies:
     - "~/docker"
   override:
     - bundle install
-    - docker info
-    - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
+    - rake pull
     - rake build
-    - mkdir -p ~/docker; docker save freistil/base-trusty > ~/docker/image.tar
 
 test:
   override:
